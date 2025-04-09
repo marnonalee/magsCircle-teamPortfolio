@@ -3,7 +3,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaPaperPlane, FaGithub , FaDesktop, FaMobileAlt, FaSearch, FaFacebook  } from "react-icons/fa";
-import logo_mo from "../assets/logo1.png";
+import logo_mo from "../assets/logo.png";
 import missionImg from "../assets/mission.jpg";
 import visionImg from "../assets/vision.jpg";
 import { MdEmail } from "react-icons/md";
@@ -46,7 +46,7 @@ const teamMembers = [
     name: "Althea Dela Cruz", 
     role: "UI/UX Designer", 
     img: img1,
-    email: "althea.delacruz@gmail.com",
+    email: "theadc24@gmail.com",
     skills: ["HTML", "CSS", "JavaScript", "Python", "MySQL", "Figma"],
     facebook: "https://www.facebook.com/share/1AecQsCRnw/",
     github: "https://github.com/jaywongay",  
@@ -91,7 +91,7 @@ const teamMembers = [
     name: "Mjay Almuete", 
     role: "Documentation Specialist", 
     img: img5,
-    email: "mjay.almuete@gmail.com",
+    email: "maglalangmjay280@gmail.com",
     skills: ["Technical Writing", "API Docs","Editing"],
     facebook: "https://www.facebook.com/mjay.almuete",
     github: "https://github.com/Jay12-hub-boop",  
@@ -113,7 +113,7 @@ const teamMembers = [
             <motion.img
               src={logo_mo}
               alt="Mag's Circle Logo"
-              className="w-48 md:w-72 lg:w-80 "
+              className="w-auto md:w-auto lg:w-96 "
             />
           </Box>
         <Box
@@ -128,6 +128,7 @@ const teamMembers = [
               className="text-[10vw] font-extrabold text-white tracking-wider uppercase leading-none font-playfair">
               Meet the Team
             </motion.h1>
+            
             <motion.h2
               className="text-[8vw] font-extrabold text-purple-600 tracking-wider uppercase leading-none drop-shadow-lg font-roboto mt-2"
               initial={{ textShadow: "0px 0px 10px rgba(138, 43, 226, 0.5)", opacity: 0, scale: 0.8 }}
@@ -142,8 +143,8 @@ const teamMembers = [
             initial={{ opacity: 0, y: 20 }}
             animate={isIntroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}>
-            We are a passionate group of innovators, creators, and problem-solvers dedicated to pushing boundaries and delivering exceptional results.
-          </motion.p>
+            We are a team of forward-thinking individuals united by a passion for innovation and collaboration. Together, we deliver high-quality digital solutions that transform ideas into impactful experiences.
+           </motion.p>
         </Box>
       <div className="relative w-full py-20 ">
         <div className="container mx-auto relative z-10 px-6 md:px-12">
@@ -170,7 +171,7 @@ const teamMembers = [
                 Mission
               </h2>
               <p className="mt-6 text-lg leading-relaxed max-w-lg">
-                We are dedicated to fostering innovation, breaking boundaries, and crafting solutions that redefine excellence.
+                Our mission is to drive innovation, exceed expectations, and develop solutions that reflect the highest standards of quality and performance.
               </p>
             </motion.div>
           </div>
@@ -198,7 +199,7 @@ const teamMembers = [
                 Vision
               </h2>
               <p className="mt-6 text-lg leading-relaxed max-w-lg">
-                We envision a world driven by innovation, sustainability, and a collective mission to build a brighter future for all.
+                We envision a future shaped by innovation, guided by sustainability, and empowered by collaboration — creating meaningful impact through technology and purposeful solutions.
               </p>
             </motion.div>
           </div>
@@ -242,7 +243,7 @@ const teamMembers = [
               Our Expertise
             </h2>
 
-            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-4 sm:px-6">
               {[ 
                 { icon: <FaPaperPlane />, title: "UI/UX Design", desc: "Crafting visually striking and user-friendly interfaces that provide seamless user experiences." },
                 { icon: <FaDesktop />, title: "Frontend Development", desc: "Building modern, responsive websites and web apps with React and Tailwind CSS to ensure high performance and accessibility." },
@@ -251,10 +252,10 @@ const teamMembers = [
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="relative group p-8 rounded-2xl shadow-2xl backdrop-blur-md transition-transform transform"
+                  className="relative group p-8 rounded-2xl shadow-2xl backdrop-blur-md transition-all transform"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  whileHover={{ x: 10, y: -10, scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }}  
                   transition={{ duration: 0.3, ease: 'easeOut' }}>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-900/40 to-pink-800/40 rounded-2xl group-hover:opacity-80 transition-opacity"></div>
                   <div className="relative z-10 flex flex-col items-center text-center text-white">
@@ -265,6 +266,7 @@ const teamMembers = [
                 </motion.div>
               ))}
             </div>
+
 
             {/* Explore Button */}
             <div className="flex justify-center mt-12 relative z-10">
@@ -286,7 +288,7 @@ const teamMembers = [
       <section id="team" className="relative overflow-hidden pb-8 z-10">
         <div className="relative w-full z-10 text-center">
           <h1 className="text-7xl font-playfair font-bold text-white drop-shadow-lg tracking-wide">
-            Our <span className="text-purple-500">Expertise</span>
+            Our <span className="text-purple-500 ">Expertise</span>
           </h1>
           <p className="text-white text-lg mt-3 mb-12 font-roboto">
             The minds behind our innovations.
@@ -327,7 +329,7 @@ const teamMembers = [
                 <motion.a
                   whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.2 }}
-                  className="text-gray-200 hover:text-purple-500 transition-colors duration-200"
+                  className="text-gray-200 hover:text-white transition-colors duration-200"
                   href={`mailto:${member.email}`}>
                   <MdEmail size={24} />
                 </motion.a>
@@ -336,7 +338,7 @@ const teamMembers = [
                   <motion.a
                     whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.2 }}
-                    className="text-blue-600 hover:text-blue-400 transition-colors duration-200" 
+                    className="text-blue-800 hover:text-blue-800 transition-colors duration-200" 
                     href={member.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -349,7 +351,7 @@ const teamMembers = [
                   <motion.a
                     whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.2 }}
-                    className="text-gray-900 hover:text-gray-600 transition-colors duration-200" 
+                    className="text-gray-900 hover:text-gray-900 transition-colors duration-200" 
                     href={member.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -359,14 +361,14 @@ const teamMembers = [
                 )}
               </div>
 
-              <div className="absolute inset-0 bg-purple-500/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-2xl p-4">
+              <div className="absolute inset-0 bg-purple-500/90 opacity-0  group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-2xl p-4">
                 <p className="text-white text-lg font-medium text-center">{member.expertise}</p>
               </div>
             </motion.div>
           ))}
         </div>
           <div className="absolute bottom-0 right-1/4 w-60 h-60 bg-purple-600 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
-          <div className="absolute top-10 left-10 w-44 h-44 bg-purple-500 opacity-30 blur-2xl rounded-full animate-pulse"></div>
+          <div className="absolute top-16 left-10 w-44 h-44 bg-purple-500 opacity-30 blur-2xl rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/3 w-32 h-32 bg-purple-400 opacity-25 blur-2xl rounded-full animate-bounce"></div>
       </section>
 
@@ -384,8 +386,7 @@ const teamMembers = [
           </motion.h1>
 
           <p className="mt-4 text-lg text-gray-100">
-            If you are interested in my work or want to provide feedback about this website, 
-            I am open to exchanging ideas.
+          If you're interested in our work or would like to share feedback about this website, we're always open to exchanging ideas and exploring opportunities together.
           </p>
         </div>
 

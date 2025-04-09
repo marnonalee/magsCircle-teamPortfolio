@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'], // Body text
-        playfair: ['Playfair Display', 'serif'], // Title font
-        montserrat: ['Montserrat', 'sans-serif'], // title font
-        merriweather: ['Merriweather', 'serif'], // body font
-        poppins: ['Poppins', 'sans-serif'], // secondary heading font
+        roboto: ['Roboto', 'sans-serif'], 
+        playfair: ['Playfair Display', 'serif'], 
+        montserrat: ['Montserrat', 'sans-serif'], 
+        merriweather: ['Merriweather', 'serif'],
+        poppins: ['Poppins', 'sans-serif'], 
       },
       textShadow: {
-        glow: '0px 0px 30px rgba(138, 43, 226, 1)', // Custom glow effect
+        glow: '0px 0px 30px rgba(138, 43, 226, 1)',
       },
       fontSize: {
         '10vw': '10vw',

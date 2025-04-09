@@ -40,11 +40,12 @@ const Project = () => {
   return (
     <section className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-300 text-white flex flex-col items-center py-20 px-10 relative bg-fixed">
       <motion.button 
-        className="absolute top-28 left-10 text-white p-3 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/30 transition-all"
-        onClick={() => navigate(-1)}
+      
+      className="absolute top-4 left-4 md:top-6 md:left-6 p-3 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/30 transition-all shadow-lg"
+     onClick={() => navigate(-1)}
         whileHover={{ scale: 1.1 }}
       >
-        <ArrowLeft className="w-6 h-6 text-white" />
+        <ArrowLeft className="w-6 h-6 text-black" />
       </motion.button>
 
       <motion.h2 
@@ -64,24 +65,28 @@ const Project = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-16 z-10">
         {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            className="flex flex-col items-center p-8 rounded-lg shadow-xl transform transition-all font-merriweather bg-white/10 backdrop-blur-md hover:scale-110 hover:bg-white/20 cursor-pointer"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            whileHover={{ scale: 1.1 }}
-            onClick={() => navigate(project.link)}
-          >
-            <img 
-              src={project.img} 
-              alt={project.title} 
-              className="w-full sm:w-80 md:w-96 h-auto object-cover rounded-lg shadow-lg"
-            />
-            <p className="mt-6 text-3xl font-bold text-gray-900 dark:text-gray-100 text-center font-montserrat">{project.title}</p>
-            <p className="mt-4 text-gray-700 dark:text-gray-700 text-center max-w-md font-roboto">{project.description}</p>
-            {project.icon && project.icon}
-          </motion.div>
+         <motion.div
+         key={index}
+         className="flex flex-col items-center p-8 rounded-lg shadow-xl transform transition-all font-merriweather bg-white/10 backdrop-blur-md hover:scale-110 hover:bg-white/20 cursor-pointer"
+         initial={{ opacity: 0, y: 20 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5, delay: index * 0.2 }}
+         whileHover={{ scale: 1.1 }}
+         onClick={() => navigate(project.link)}
+       >
+         <img 
+           src={project.img} 
+           alt={project.title} 
+           className="w-full sm:w-80 md:w-96 h-auto object-cover rounded-lg shadow-lg"
+         />
+         <p className="mt-6 text-3xl font-bold text-gray-900 dark:text-gray-100 text-center font-montserrat">{project.title}</p>
+         <p className="mt-4 text-gray-700 dark:text-gray-700 text-center max-w-md font-roboto">{project.description}</p>
+         {project.icon && project.icon}
+         <p className="mt-4 text-black font-semibold underline underline-offset-4 hover:text-white transition-colors">
+           See Project →
+         </p>
+       </motion.div>
+       
         ))}
       </div>
     </section>

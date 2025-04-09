@@ -88,7 +88,7 @@ const Navbar = () => {
 
   return (
     <nav role="navigation" className={`fixed w-full z-50 transition-all duration-300 `}>
-      <div className="container mx-auto flex justify-between items-center pl-4 md:px-2 py-4">
+      <div className="container mx-auto flex justify-between items-center px-4 md:px-2">
         <Link to="/" className="flex items-center">
           {isScrolled && (
             <img

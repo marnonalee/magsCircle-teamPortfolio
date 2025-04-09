@@ -17,8 +17,8 @@ const Project_2 = () => {
   return (
     <div className="bg-gradient-to-r from-purple-500 to-pink-300 flex flex-col items-center justify-center min-h-screen">
       <button
-        className="absolute top-20 left-10 p-3 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/30 transition-all shadow-lg"
-        onClick={() => navigate(-1)}>
+  className="absolute top-4 left-4 md:top-6 md:left-6 p-3 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/30 transition-all shadow-lg"
+onClick={() => navigate(-1)}>
         <ArrowLeft className="w-6 h-6  text-gray-800" />
       </button>
       <h1 className="mt-16 text-6xl font-extrabold text-white text-center">
